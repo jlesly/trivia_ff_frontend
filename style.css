@@ -1,12 +1,28 @@
+h1 {
+    color: lightgray;
+    text-align: center;
+    font-family: sans-serif
+}
+
 body {
     background-color: rgb(95, 158, 160);
     margin-left: auto;
     margin-right: auto;
     display: block;
+    justify-content: space-between;
+}
+
+.category-wrapper {
+    height: 80px;
+    width: 650px;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 30px
 }
 
 .game-wrapper {
-    height: 650px;
+    height: 350px;
     width: 650px;
     background-color: whitesmoke;
     margin: 20px auto;
@@ -14,37 +30,35 @@ body {
     padding: 30px
 }
 
-.game-wrapper .question {
+.category-wrapper .category {
     text-align: center;
-    color: purple;
+    color: black;
     padding-top: 20px;
+    font-family: sans-serif
 }
 
-.game-wrapper .options {
-    float: left;
+.category-wrapper .categories {
+    font-family: sans-serif;
+    color: orangered;
 }
 
-.game-wrapper .options ul {
-    list-style: none;
-    padding: 25%;
+.category-wrapper .categories ul {
     display: flex;
-    justify-content: space-between;
+    padding: 0%;
     flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: sans-serif;
+    cursor: pointer;
 }
 
-.game-wrapper .options ul il {
-    display: inline-block;
-    padding: 25px;
-}
-
-.game-wrapper .options ul li.correct {
-    background-color: seagreen;
-    box-shadow: 0px, 3px gray;
+.game-wrapper .question .category-questions ul {
+    float: left;
+    list-style: none;
 }
 
 .game-wrapper .score {
-    float: right;
-    width: 100%;
+    text-align: center;
+    font-family: sans-serif
 }
 
 .game-wrapper .score .next {
@@ -53,8 +67,63 @@ body {
 }
 
 .game-wrapper .score .score-container {
-    width: 35%;
-    float: right;
+    text-align: center;
+    box-shadow: lightgray
 }
 
-#
+.form-container {
+    height: 150px;
+    width: 650px;
+    background-color: whitesmoke;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center
+}
+
+input[type=submit] {
+    background-color: gray;
+    border: none;
+    color: whitesmoke;
+    padding: 16px 32 px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 24%
+}
+
+h4 {
+    font-family: sans-serif;
+}
+
+.scores {
+    height: 400px;
+    width: 650px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 30px
+}
+
+.game-wrapper .options ul {
+    background-color: gray;
+    border: none;
+    color: whitesmoke;
+    padding: 16px 32 px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 24%;
+    justify-content: space-between;
+}
+
+.button2 {
+    background-color: gray;
+    border: none;
+    color: whitesmoke;
+    padding: 16px 32 px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 24%
+}

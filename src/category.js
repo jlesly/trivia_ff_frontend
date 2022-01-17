@@ -6,17 +6,17 @@ class Category {
     }
 
     static renderCategory() {
-        let select = document.getElementById("question-container")
+        let select = document.getElementById("category-container")
         select.innerHTML = "Select a Category"
-        let ul = document.getElementById("ul")
+        let ul = document.getElementById("ul2")
         Category.all.forEach(category => {
-            let li = document.createElement("li")
-            li.setAttribute("id", `${category.id}`);
-            li.innerHTML = `${category.name}`
-            ul.appendChild(li)
-            li.addEventListener('click', function(e) {
+            let li2 = document.createElement("li2")
+            li2.setAttribute("id", `${category.id}`);
+            li2.innerHTML = `${category.name}`
+            ul2.appendChild(li2)
+            li2.addEventListener('click', function(e) {
                 Question.renderQuestions(e);
-                li.remove("id")
+                li2.remove("id")
             })
         })
     }

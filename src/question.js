@@ -27,7 +27,7 @@ class Question {
             categoryQuestions.appendChild(ul)
             ul.appendChild(li)
 
-            let button1 = document.createElement("button1")
+            let button1 = document.createElement("BUTTON")
             button1.innerHTML = `${question.option}`
             li.appendChild(button1)
             button1.addEventListener('click', function(e) {
@@ -36,8 +36,8 @@ class Question {
                 ul.remove("id")
             })
 
-            let button2 = document.createElement("button2")
-            button2.innerHTML = `${question.option}`
+            let button2 = document.createElement("BUTTON")
+            button2.innerHTML = `${question.answer}`
             li.appendChild(button2)
             button2.addEventListener('click', function(e) {
                 e.preventDefault()
