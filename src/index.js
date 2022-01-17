@@ -6,6 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
     getCategories()
 })
 
+function getUsers() {
+    fetch(users_endPoint)
+        .then(response => response.json())
+        .then(json => {
+            for (let user of json.data) {
+                let userData = Object.assign({}, { id: user.id }, user.attributes)
+                let newUser = new user(userData)
+                newUser.renderUser()
+            }
+        })
+}
+
+
+
+
 function getCategories() {
     fetch(categories_endPoint)
         .then(response => response.json())
