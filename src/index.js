@@ -50,9 +50,18 @@ function getCategories() {
         .then(response => response.json())
         .then(json => {
             for (let category of json.data) {
-
                 let newCategory = new Category(category, category.attributes)
             }
             Category.renderCategory();
+        })
+}
+
+function getQuestions() {
+    fetch(questions_endPoint)
+        .then(response => response.json())
+        .then(json => {
+            for (let question of json.data) {
+                let newQuestion = new question(question, question.attributes)
+            }
         })
 }
