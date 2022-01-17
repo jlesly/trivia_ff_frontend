@@ -20,7 +20,6 @@ function getUsers() {
 
 
 
-
 function getCategories() {
     fetch(categories_endPoint)
         .then(response => response.json())
