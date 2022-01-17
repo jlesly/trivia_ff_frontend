@@ -50,4 +50,4 @@ class Question {
     }
 
 }
-Question.all = []
+Question.all = [];

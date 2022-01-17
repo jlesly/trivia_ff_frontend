@@ -22,4 +22,4 @@ class Category {
     }
 }
 
-Category.all = []
+Category.all = [];
