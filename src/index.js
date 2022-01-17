@@ -28,7 +28,8 @@ function createFormHandler(e) {
     e.preventDefault()
     let newUser = document.querySelector("#create-user").value
     let score = document.querySelector("#score").value
-    postFetch(newUser)
+    postFetch(newUser);
+    alert("Thanks for playing. Your score was saved!")
 }
 
 function postFetch(newUser) {
