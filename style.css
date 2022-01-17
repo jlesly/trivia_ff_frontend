@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(95, 158, 160);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.game-wrapper {
+    height: 650px;
+    width: 650px;
+    background-color: whitesmoke;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 30px
+}
+
+.game-wrapper .question {
+    text-align: center;
+    color: purple;
+    padding-top: 20px;
+}
+
+.game-wrapper .options {
+    float: left;
+}
+
+.game-wrapper .options ul {
+    list-style: none;
+    padding: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.game-wrapper .options ul il {
+    display: inline-block;
+    padding: 25px;
+}
+
+.game-wrapper .options ul li.correct {
+    background-color: seagreen;
+    box-shadow: 0px, 3px gray;
+}
+
+.game-wrapper .score {
+    float: right;
+    width: 100%;
+}
+
+.game-wrapper .score .next {
+    width: 35%;
+    float: right;
+}
+
+.game-wrapper .score .score-container {
+    width: 35%;
+    float: right;
+}
+
+#

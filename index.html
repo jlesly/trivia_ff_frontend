@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia for Frank!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
+    <h1>Trivia for Frank!</h1>
     <div class="form-container">
         <form id="new-user">
-            <h3>Enter a username below to save your score!</h3>
+            <h4>Enter a username below to save your score!</h4>
             <input id="create-user" type="text" name="new-user" placeholder="Username">
             <br><br>
             <input type="hidden" id="score" name="score" value="`${user.score}`">
             <input id="submit" type="submit" name="submit" value="Save Score" class="submit">
         </form>
     </div>
-
+    <br><br>
     <div class="game-wrapper">
         <div id="question-container" class="question">
 
@@ -35,8 +38,12 @@
             </div>
         </div>
 
+        <div id="results">
 
+        </div>
+        <div id="category-questions"></div>
     </div>
+
 </body>
 <script type="text/javascript" src="src/index.js"></script>
 <script type="text/javascript" src="src/category.js"></script>

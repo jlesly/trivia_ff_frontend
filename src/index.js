@@ -2,6 +2,8 @@ const categories_endPoint = "http://localhost:3000/api/v1/categories"
 const users_endPoint = "http://localhost:3000/api/v1/users"
 const questions_endPoint = "http://localhost:3000/api/v1/questions"
 
+let currentScore = 0
+
 document.addEventListener('DOMContentLoaded', () => {
     getCategories(), getUsers(), getQuestions()
 
@@ -16,7 +18,8 @@ function getUsers() {
         .then(json => {
             for (let user of json.data) {
                 let userData = Object.assign({}, { id: user.id }, user.attributes)
-                let newUser = new user(userData)
+                let newUser = new User(userData)
+                debugger
                 newUser.renderUser()
             }
         })
@@ -29,7 +32,7 @@ function createFormHandler(e) {
     postFetch(newUser)
 }
 
-function postFetch() {
+function postFetch(newUser) {
     fetch(users_endPoint, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -40,7 +43,7 @@ function postFetch() {
         })
         .then(response => response.json())
         .then(user => {
-            let newUser = new user(user)
+            let newUser = new User(user)
             newUser.renderUser()
         })
 }
@@ -61,7 +64,7 @@ function getQuestions() {
         .then(response => response.json())
         .then(json => {
             for (let question of json.data) {
-                let newQuestion = new question(question, question.attributes)
+                let newQuestion = new Question(question, question.attributes)
             }
         })
 }
