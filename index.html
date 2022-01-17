@@ -13,12 +13,15 @@
         <form id="new-user">
             <h4></h4>
             <input id="create-user" type="text" name="new-user" placeholder="Username">
-            <br>
-            <input id="submit" type="submit" name="submit" class="submit">
+            <br><br>
+            <input type="hidden" id="score" name="score" value="`${user.score}`">
+            <input id="submit" type="submit" name="submit" value="Save Score!" class="submit">
         </form>
     </div>
 </body>
 <script type="text/javascript" src="src/index.js"></script>
 <script type="text/javascript" src="src/category.js"></script>
+<script type="text/javascript" src="src/question.js"></script>
+<script type="text/javascript" src="src/user.js"></script>
 
 </html>

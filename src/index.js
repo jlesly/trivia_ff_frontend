@@ -29,6 +29,22 @@ function createFormHandler(e) {
     postFetch(newUser)
 }
 
+function postFetch() {
+    fetch(users_endPoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                username: newUser,
+                score: currentScore
+            })
+        })
+        .then(response => response.json())
+        .then(user => {
+            let newUser = new user(user)
+            newUser.renderUser()
+        })
+}
+
 function getCategories() {
     fetch(categories_endPoint)
         .then(response => response.json())
