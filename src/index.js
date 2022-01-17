@@ -22,18 +22,6 @@ function getUsers() {
         })
 }
 
-function getUsers() {
-    fetch(users_endPoint)
-        .then(response => response.json())
-        .then(json => {
-            for (let user of json.data) {
-                let userData = Object.assign({}, { id: user.id }, user.attributes)
-                let newUser = new user(userData)
-                newUser.renderUser()
-            }
-        })
-}
-
 function createFormHandler(e) {
     e.preventDefault()
     let newUser = document.querySelector("#create-user").value
