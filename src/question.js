@@ -1,15 +1,16 @@
 class Question {
     constructor(question, questionAttributes) {
-        this.id = question.id
-        this.prompt = question.prompt
-        this.option = question.option
-        this.answer = question.answer
+        this.id = questionAttributes.id
+        this.prompt = questionAttributes.prompt
+        this.option = questionAttributes.option
+        this.answer = questionAttributes.answer
         this.category_id = questionAttributes.category_id
         Question.all.push(this)
     }
     static renderQuestions(e) {
         let score = document.getElementById("scoreContainer");
         score.innerHTMl = currentScore;
+        let resultContainer = document.getElementById("results")
         let categoryQuestions = document.getElementById("category-questions")
         categoryQuestions.innerHTML = ""
         let filter = Question.all.filter(function(question) {

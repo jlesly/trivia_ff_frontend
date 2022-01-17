@@ -10,6 +10,7 @@ class User {
         let ul1 = document.getElementById("ul1")
         let li = document.createElement("li")
         li.innerHTML = `${this.username}'s Score: ${this.score}`
+        debugger
         ul1.appendChild(li)
     }
 }

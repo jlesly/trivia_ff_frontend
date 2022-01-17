@@ -19,7 +19,6 @@ function getUsers() {
             for (let user of json.data) {
                 let userData = Object.assign({}, { id: user.id }, user.attributes)
                 let newUser = new User(userData)
-                debugger
                 newUser.renderUser()
             }
         })
